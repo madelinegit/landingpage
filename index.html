@@ -480,22 +480,21 @@
     }
     .who-check svg { color: var(--sage); width: 14px; height: 14px; }
     .who-aside {
-      background: var(--sage-pale);
-      border: 1.5px solid rgba(46,125,94,0.15);
+      background: var(--ink);
       border-radius: var(--radius);
       padding: 36px 32px;
-      color: var(--ink);
+      color: #fff;
     }
     .who-aside h3 {
       font-family: 'Instrument Serif', serif;
       font-size: 1.5rem;
       margin-bottom: 14px;
       line-height: 1.25;
-      color: var(--ink);
+      color: #fff;
     }
     .who-aside p {
       font-size: 0.88rem;
-      color: var(--ink-soft);
+      color: rgba(255,255,255,0.65);
       line-height: 1.65;
       margin-bottom: 24px;
     }
@@ -505,21 +504,21 @@
       gap: 12px;
     }
     .stat-box {
-      background: #fff;
-      border: 1px solid rgba(46,125,94,0.15);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius-sm);
       padding: 16px;
     }
     .stat-box-num {
       font-family: 'Instrument Serif', serif;
       font-size: 1.8rem;
-      color: var(--sage);
+      color: #fff;
       line-height: 1;
       margin-bottom: 4px;
     }
     .stat-box-label {
       font-size: 0.72rem;
-      color: var(--ink-muted);
+      color: rgba(255,255,255,0.45);
       text-transform: uppercase;
       letter-spacing: 0.06em;
       font-weight: 600;
@@ -818,7 +817,7 @@
       <a href="#" class="logo">
         <span class="logo-dot"></span> Routesnapper
       </a>
-      <a href="#" class="nav-cta" onclick="openModal(event)">Request Access</a>
+      <a href="#contact" class="nav-cta">Get in Touch</a>
     </div>
   </nav>
 
@@ -833,8 +832,8 @@
         <h1>Plan your cleaning routes in <em>minutes</em> — not hours.</h1>
         <p class="hero-sub">Built for cleaning companies with recurring clients. Organize your schedule, assign cleaners, and run your week without spreadsheets or constant texting.</p>
         <div class="btn-row">
-          <a href="#" class="btn-primary" onclick="openModal(event)">Request Access</a>
-          <a href="#how" class="btn-secondary">See How It Works</a>
+          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="btn-primary">Book a Call</a>
+          <a href="mailto:ecodevwy@gmail.com?subject=Routesnapper Inquiry" class="btn-secondary">Email Us</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -977,8 +976,15 @@
         <div class="solution-card">
           <div class="solution-icon-wrap">📲</div>
           <div>
-            <div class="solution-card-title">Share routes via mobile-friendly link</div>
-            <div class="solution-card-desc">Send cleaners a clean, easy-to-read route link they can pull up on their phone. Update it any time — they see the latest automatically.</div>
+            <div class="solution-card-title">Send a live link — update it anytime</div>
+            <div class="solution-card-desc">Share a mobile-friendly route link with each cleaner every morning. Add a stop mid-day, change the order, handle a last-minute cancellation — they see the updated route instantly, no texts needed.</div>
+          </div>
+        </div>
+        <div class="solution-card">
+          <div class="solution-icon-wrap">🔑</div>
+          <div>
+            <div class="solution-card-title">Priority check-ins, handled</div>
+            <div class="solution-card-desc">Flag check-in cleans so they're automatically scheduled first. No more scrambling to make sure the right property is done before guests arrive.</div>
           </div>
         </div>
         <div class="solution-card">
@@ -1057,7 +1063,7 @@
         </div>
         <div class="who-aside">
           <h3>Sound like your business?</h3>
-          <p>We're working directly with owners like you during early access to make sure the product actually fits your workflow. You'll get personal onboarding — not a generic tutorial.</p>
+          <p>Send your cleaners a mobile-friendly route link every morning — and update it any time during the day if plans change. They always see the latest version, no calls or texts needed.</p>
           <div class="stat-row">
             <div class="stat-box">
               <div class="stat-box-num">100+</div>
@@ -1108,7 +1114,7 @@
             <li>Weekly route generation</li>
             <li>Email support</li>
           </ul>
-          <a href="#" class="pricing-cta" onclick="openModal(event)">Request Access</a>
+          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="pricing-cta">Book a Call</a>
         </div>
         <div class="pricing-card featured">
           <div class="pricing-tier">Growth</div>
@@ -1120,7 +1126,7 @@
             <li>Priority onboarding</li>
             <li>Direct founder support</li>
           </ul>
-          <a href="#" class="pricing-cta" onclick="openModal(event)">Request Access</a>
+          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="pricing-cta">Book a Call</a>
         </div>
       </div>
       <div style="margin-top:28px; background:var(--cream); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px; max-width:700px;">
@@ -1133,14 +1139,16 @@
   </section>
 
   <!-- FINAL CTA -->
-  <section class="final-cta">
+  <section class="final-cta" id="contact">
     <div>
-      <h2>Stop planning routes manually.</h2>
-      <p>See how it works for your business. Takes less than 10 minutes.</p>
-      <div class="btn-row">
-        <a href="#" class="btn-primary" onclick="openModal(event)">Request Access</a>
-        <a href="#" class="btn-secondary" onclick="event.preventDefault(); window.open('https://calendly.com/ecodevwy/30min', '_blank')">Book a Demo</a>
+      <h2>Ready to simplify your routes?</h2>
+      <p>Pick the easiest way to reach us — we'll take it from there.</p>
+      <div class="btn-row" style="justify-content:center; flex-wrap:wrap; gap:12px;">
+        <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="btn-primary">📞 Book a Phone Call</a>
+        <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="btn-secondary" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#fff;">💻 Meet Us on Google Meet</a>
+        <a href="mailto:ecodevwy@gmail.com?subject=Routesnapper Inquiry" class="btn-secondary" style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3); color:#fff;">✉️ Send an Email</a>
       </div>
+      <p style="font-size:0.78rem; color:rgba(255,255,255,0.45); margin-top:20px;">We'll respond within 24 hours.</p>
     </div>
   </section>
 
