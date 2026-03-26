@@ -560,87 +560,33 @@
 
     /* ─── PRICING ─── */
     .pricing-section { background: var(--white); }
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      max-width: 700px;
-    }
-    .pricing-card {
-      border-radius: var(--radius);
-      border: 1.5px solid var(--border);
-      padding: 32px 28px;
+    .pricing-custom-card {
+      max-width: 620px;
       background: var(--cream);
-      transition: box-shadow 0.2s, transform 0.2s;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 44px 48px;
     }
-    .pricing-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
-    .pricing-card.featured {
-      background: var(--ink);
-      border-color: var(--ink);
-      color: #fff;
-    }
-    .pricing-tier {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--ink-muted);
-      margin-bottom: 12px;
-    }
-    .pricing-card.featured .pricing-tier { color: rgba(255,255,255,0.45); }
-    .pricing-price {
+    .pricing-custom-card h3 {
       font-family: 'Instrument Serif', serif;
-      font-size: 2.8rem;
-      line-height: 1;
-      margin-bottom: 4px;
+      font-size: clamp(1.5rem, 2.5vw, 2rem);
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 16px;
     }
-    .pricing-period {
+    .pricing-custom-card p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 480px;
+    }
+    .pricing-scarcity {
+      margin-top: 20px;
       font-size: 0.8rem;
       color: var(--ink-muted);
-      margin-bottom: 20px;
+      font-style: italic;
     }
-    .pricing-card.featured .pricing-period { color: rgba(255,255,255,0.5); }
-    .pricing-features { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
-    .pricing-features li {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.85rem;
-      color: var(--ink-soft);
-    }
-    .pricing-card.featured .pricing-features li { color: rgba(255,255,255,0.75); }
-    .pricing-features li::before {
-      content: '';
-      width: 16px; height: 16px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%232e7d5e'%3E%3Cpath d='M13.3 4.3a1 1 0 0 0-1.4 0L6.5 9.6 4.1 7.3a1 1 0 0 0-1.4 1.4l3 3a1 1 0 0 0 1.4 0l6-6a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E") no-repeat center;
-      flex-shrink: 0;
-    }
-    .pricing-card.featured .pricing-features li::before {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3E%3Cpath d='M13.3 4.3a1 1 0 0 0-1.4 0L6.5 9.6 4.1 7.3a1 1 0 0 0-1.4 1.4l3 3a1 1 0 0 0 1.4 0l6-6a1 1 0 0 0 0-1.4z'/%3E%3C/svg%3E");
-    }
-    .pricing-cta {
-      display: block;
-      text-align: center;
-      padding: 13px;
-      border-radius: var(--radius-sm);
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: 'DM Sans', sans-serif;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-    .pricing-card .pricing-cta {
-      background: var(--sage-pale);
-      color: var(--sage);
-      border: 1.5px solid transparent;
-    }
-    .pricing-card .pricing-cta:hover { background: var(--sage); color: #fff; }
-    .pricing-card.featured .pricing-cta {
-      background: #fff;
-      color: var(--ink);
-    }
-    .pricing-card.featured .pricing-cta:hover { background: var(--sage); color: #fff; }
 
     /* ─── FINAL CTA ─── */
     .final-cta {
@@ -798,6 +744,7 @@
       .pricing-grid { grid-template-columns: 1fr; }
       .problem-grid { grid-template-columns: 1fr 1fr; }
       h2 { font-size: 1.9rem; }
+      .pricing-custom-card { padding: 32px 28px; }
     }
 
     @media (max-width: 480px) {
@@ -1101,40 +1048,15 @@
   <section class="pricing-section" id="pricing">
     <div class="section-inner">
       <div class="section-label">Pricing</div>
-      <h2>Simple pricing. No surprises.</h2>
-      <p class="section-sub">Start with what fits your size. All plans include full access — no feature locks.</p>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$49</div>
-          <div class="pricing-period">/ month · up to 100 properties</div>
-          <ul class="pricing-features">
-            <li>Up to 100 properties</li>
-            <li>Unlimited cleaners</li>
-            <li>Weekly route generation</li>
-            <li>Email support</li>
-          </ul>
-          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="pricing-cta">Book a Call</a>
+      <h2>Pricing is figured out together.</h2>
+      <div class="pricing-custom-card">
+        <p>We're not selling plans or seats. We build a custom version of Routesnapper for your business — your URL, your properties, your team — and put together something that makes sense and improves your operations tenfold.</p>
+        <p style="margin-bottom: 0;">Book a call, tell us what you're working with, and we'll take it from there.</p>
+        <div style="margin-top: 32px;">
+          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="btn-primary">Book a Call →</a>
         </div>
-        <div class="pricing-card featured">
-          <div class="pricing-tier">Growth</div>
-          <div class="pricing-price" style="color:#fff;">$99</div>
-          <div class="pricing-period">/ month · unlimited properties</div>
-          <ul class="pricing-features">
-            <li>Unlimited properties</li>
-            <li>Unlimited cleaners</li>
-            <li>Priority onboarding</li>
-            <li>Direct founder support</li>
-          </ul>
-          <a href="https://calendly.com/ecodevwy/30min" target="_blank" class="pricing-cta">Book a Call</a>
-        </div>
+        <p class="pricing-scarcity">Currently taking on a small number of new businesses.</p>
       </div>
-      <div style="margin-top:28px; background:var(--cream); border:1px solid var(--border); border-radius:var(--radius); padding:22px 26px; max-width:700px;">
-        <p style="font-size:0.88rem; color:var(--ink-soft); line-height:1.65;">
-          <strong style="color:var(--ink);">Not sure which fits?</strong> We're flexible. If monthly doesn't work for your business, we're open to other arrangements — just bring it up when we talk. Pricing should never be the reason you don't move forward.
-        </p>
-      </div>
-      <p style="font-size:0.8rem; color:var(--ink-muted); margin-top:14px;">Early access pricing. Locked in for the life of your account.</p>
     </div>
   </section>
 
